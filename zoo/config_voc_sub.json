@@ -3,7 +3,7 @@
         "min_input_size":       224,
         "max_input_size":       480,
         "anchors":              [24,34, 46,84, 68,185, 116,286, 122,97, 171,180, 214,327, 326,193, 359,359],
-        "labels":               ["cat", "dog", "sheep"]
+        "labels":               ["cat", "dog", "sheep", "cow", "chair"]
     },
 
     "train": {
