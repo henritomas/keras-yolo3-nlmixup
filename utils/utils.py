@@ -187,7 +187,7 @@ def decode_netout(netout, anchors, obj_thresh, net_h, net_w):
             # 4th element is objectness score
             objectness = netout[row, col, b, 4]
             
-            if(objectness <= obj_thresh): continue
+            if(objectness <= obj_thresh).all(): continue
             
             # first 4 elements are x, y, w, and h
             x, y, w, h = netout[row,col,b,:4]
