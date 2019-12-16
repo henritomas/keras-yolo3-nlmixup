@@ -132,8 +132,8 @@ class BatchGenerator(Sequence):
                 true_box_index  = true_box_index % self.max_box_per_image    
 
             # assign input image to x_batch
-            if self.norm != None: 
-            #if False:
+            #if self.norm != None: 
+            if False:
                 x_batch[instance_count] = self.norm(img)
             else:
                 # plot image and bounding boxes for sanity check
@@ -168,7 +168,7 @@ class BatchGenerator(Sequence):
         if self.nl_mixup > 0.0:
             
             cow_no = np.random.randint(low=0, high=329)
-            chosen_cow = './cropped_cows/cow_' + str(cow_no) + '.jpg'
+            chosen_cow = './cropped_data/cropped_cows/cow_' + str(cow_no) + '.jpg'
             alien = cv2.imread(chosen_cow)
             
             mixup_rate = self.nl_mixup
