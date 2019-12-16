@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+log_voc
+*/voc_rooms_train/*
+voc_train.pkl
+voc_valid.pkl
