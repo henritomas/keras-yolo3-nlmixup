@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       224,
+        "max_input_size":       480,
+        "anchors":              [59,67, 84,142, 134,237, 168,120, 201,310, 231,191, 275,355, 332,238, 375,368],
+        "labels":               ["cat", "dog"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/henri_tomas/projects/mixup/keras-yolo3/data/train/JPEGImages/",
+        "train_annot_folder":   "/home/henri_tomas/projects/mixup/keras-yolo3/data/train/Annotations/",  
+        "cache_name":           "voc_train.pkl",  
+          
+        "train_times":          1,
+        "batch_size":           8,
+        "learning_rate":        1e-5,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "log_voc",
+        "saved_weights_name":   "voc.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "/home/henri_tomas/projects/mixup/keras-yolo3/data/val/JPEGImages/",
+        "valid_annot_folder":   "/home/henri_tomas/projects/mixup/keras-yolo3/data/val/Annotations/",  
+        "cache_name":           "voc_valid.pkl",
+
+        "valid_times":          1
+    }
+}
